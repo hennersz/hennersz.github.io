@@ -10,7 +10,7 @@ h1{
   font-size: 56px;
 }
 
-.icons{
+.col-md-2{
   padding-top: 5%;
 }
 
