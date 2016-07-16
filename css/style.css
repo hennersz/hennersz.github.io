@@ -1,0 +1,23 @@
+body{
+  font-family: 'Space Mono', monospace;
+}
+
+.container{
+  padding-top: 30vh;
+}
+
+h1{
+  font-size: 56px;
+}
+
+.icons{
+  padding-top: 5%;
+}
+
+a{
+  color: #333;
+}
+
+a:hover{
+  color: #333;
+}

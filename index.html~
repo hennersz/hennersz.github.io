@@ -18,7 +18,7 @@
         </div>
         <div class="icons">
           <div class="col-md-2">
-            <a href="https://github.com/hennersz"><i class="fa fa-github fa-5x" aria-hidden="true"></i></a>
+            <i class="fa fa-github fa-5x" aria-hidden="true"></i>
           </div>
           <div class="col-md-2">
             <a href="https://www.linkedin.com/in/henry-mortimer"><i class="fa fa-linkedin fa-5x" aria-hidden="true"></i></a>
