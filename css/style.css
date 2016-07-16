@@ -3,7 +3,7 @@ body{
 }
 
 .container{
-  padding-top: 30vh;
+  padding-top: 20vh;
 }
 
 h1{
@@ -20,4 +20,8 @@ a{
 
 a:hover{
   color: #333;
+}
+
+.centered{
+  text-align: center;
 }
