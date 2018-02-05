@@ -1,0 +1,68 @@
+h1,h2, h3, h4{
+  font-family: $headingFont;
+  color: $headingColour;
+  line-height: 1.5;
+  font-weight: 600;
+}
+
+h1{
+  color: $highlightColour;
+  font-size: 2.5em;
+  a, a:visited {
+		text-decoration: none;
+		color: $highlightColour;
+	}
+}
+
+h2{
+  font-size: 2em;
+}
+
+a, a:visited {
+  color: $linkColour;
+  text-decoration: underline;
+  font-weight: bold;
+  &:hover {
+    color: $linkColourHover;
+    text-decoration: underline;
+  }
+}
+
+button {
+  padding: 15px;
+  font-size: 0.9em;
+  border: 3px solid #FF1C67;
+  border-radius: 10em;
+  margin: auto;
+  color: #FF1C67;
+  cursor: pointer;
+
+  &:hover{
+    color: white;
+    background: #FF1C67;
+
+  }
+}
+
+navbar {
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  font-size: 1.3em;
+  position: fixed;
+  width: 100%;
+  background: white;
+  padding-left: 3vw;
+  a, a:hover{
+    text-decoration: none;
+  }
+  box-shadow: 0 3px 6px rgba(0,0,0,0.16), 0 3px 6px rgba(0,0,0,0.23);
+}
+
+time {
+  color: #8E8E8E;
+}
+
+hr{
+  border-width: 0.5px;
+}

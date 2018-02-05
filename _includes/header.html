@@ -1,23 +1,21 @@
-<!doctype html>
-<html>
-  <head>
-    <meta charset="utf-8">
-    <title>
-      {% if post.title %}
-        {{post.title}}
-      {% elsif page.title%}
-        {{page.title}}
-      {%else%}
-        {{site.date.title}}
-      {% endif %}     
-    </title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
-    <!-- RSS -->
-    <link rel="alternate" type="application/rss+xml" title="{{ site.data.title }} {{ site.data.description }}" href="{{ site.data.url }}/feed.xml">
-    <link rel="alternate" type="application/atom+xml" title="{{ site.data.title }} {{ site.data.description }}" href="{{ site.data.url }}/atom.xml">
-    <link rel="stylesheet" href="{{ site.data.url }}/css/font-awesome/css/font-awesome.min.css">
-   <link rel="stylesheet" href="{{ site.data.url }}/css/main.css">
-   <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
-  </head>
-
-  <body>
+<head>
+  <meta charset="utf-8">
+  <title>
+    {% if post.title %}
+      {{post.title}}
+    {% elsif page.title%}
+      {{page.title}}
+    {%else%}
+      {{site.title}}
+    {% endif %}     
+  </title>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0">
+  <!-- RSS -->
+  <link rel="alternate" type="application/rss+xml" title="{{ site.data.title }} {{ site.data.description }}" href="{{ site.data.url }}/feed.xml">
+  <link rel="alternate" type="application/atom+xml" title="{{ site.data.title }} {{ site.data.description }}" href="{{ site.data.url }}/atom.xml">
+  <link rel="stylesheet" href="{{ site.data.url }}/css/font-awesome/css/font-awesome.min.css">
+ <link rel="stylesheet" href="{{ site.data.url }}/css/main.css">
+ <link rel="shortcut icon" href="{{ site.data.url }}/favicon.ico" />
+ <link href="https://fonts.googleapis.com/css?family=Space+Mono" rel="stylesheet">
+ <link href="https://fonts.googleapis.com/css?family=Karla" rel="stylesheet">
+</head>

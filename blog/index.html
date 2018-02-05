@@ -1,0 +1,15 @@
+---
+title: Henry Mortimer - Blog
+layout: default
+showNav: true
+---
+
+<div class="content centered">
+  <h1>Blog</h1>
+  <hr/>
+  {% for post in site.posts %}
+		<h3><a href="{{ post.url | prepend: site.baseurl }}">{{ post.title }}</a></h3>
+    <time>{{ post.date | date: "%b %-d, %Y" }}</time>
+    {{post.excerpt}}
+  {% endfor %}
+</div>

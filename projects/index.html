@@ -1,0 +1,16 @@
+---
+title: Henry Mortimer - Projects
+layout: default
+showNav: true
+---
+
+<div class="content centered">
+  <h1>Projects</h1>
+  <hr/>
+  {% for project in site.projectPosts %}
+  <div class="padded">
+    <h3><a href="{{project.url}}">{{project.title}}</a></h3>
+    {{project.summary}}
+  </div>
+  {% endfor %}
+</div>

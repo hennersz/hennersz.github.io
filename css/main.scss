@@ -3,60 +3,8 @@
 # only Main files contain this front matter, not partials.
 ---
 
-html, body {
-  width: 100%;
-  height: 100%;
-  font-family: 'Space Mono', monospace;
-  margin: 0;
-}
-
-a{
-  color: #333;
-}
-
-a:hover{
-  color: #333;
-}
-
-.content {
-  box-sizing: border-box;
-  padding-top: 30px;
-  padding-left: 15vw;
-  padding-right: 15vw;
-  width: 100%;
-  height: 100%;
-}
-
-.flexRow {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-direction: row;
-}
-
-.flexColumn {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100%;
-}
-
-.flex1 {
-  flex-grow: 1
-}
-
-.flex2 {
-  flex-grow: 2
-}
-
-.flex3 {
-  flex-grow: 3
-}
-
-.flex4 {
-  flex-grow: 4
-}
-
-.centered {
-  text-align: center;
-}
+@import 
+  "base",
+  "syntax-highlighting",
+  "layout",
+  "elements";

@@ -30,6 +30,25 @@ plugins:
 sass:
   sass_dir: _sass
 
+collections:
+  projectPosts:
+    output: true
+
+defaults:
+  - scope:
+      path: ""
+      type: projectPosts
+    values:
+      layout: projectPost
+      permalink: /project/:title/
+      showNav: true
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: blogPost
+      permalink: /blog/:title/
+      showNav: true
 # Exclude from processing.
 # The following items will not be processed, by default. Create a custom list
 # to override the default setting.
