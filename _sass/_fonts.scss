@@ -12,6 +12,20 @@
        url('/fonts/space-mono-v2-latin-regular.svg#SpaceMono') format('svg'); /* Legacy iOS */
 }
 
+/* space-mono-700 - latin */
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 700;
+  src: url('/fonts/space-mono-v2-latin-700.eot'); /* IE9 Compat Modes */
+  src: local('Space Mono Bold'), local('SpaceMono-Bold'),
+       url('/fonts/space-mono-v2-latin-700.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
+       url('/fonts/space-mono-v2-latin-700.woff2') format('woff2'), /* Super Modern Browsers */
+       url('/fonts/space-mono-v2-latin-700.woff') format('woff'), /* Modern Browsers */
+       url('/fonts/space-mono-v2-latin-700.ttf') format('truetype'), /* Safari, Android, iOS */
+       url('/fonts/space-mono-v2-latin-700.svg#SpaceMono') format('svg'); /* Legacy iOS */
+}
+
 /* karla-regular - latin */
 @font-face {
   font-family: 'Karla';
