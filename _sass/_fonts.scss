@@ -3,6 +3,7 @@
   font-family: 'Space Mono';
   font-style: normal;
   font-weight: 400;
+  font-display: fallback;
   src: url('/fonts/space-mono-v2-latin-regular.eot'); /* IE9 Compat Modes */
   src: local('Space Mono'), local('SpaceMono-Regular'),
        url('/fonts/space-mono-v2-latin-regular.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
@@ -17,6 +18,7 @@
   font-family: 'Work Sans';
   font-style: normal;
   font-weight: 300;
+  font-display: fallback;
   src: url('/fonts/work-sans-v3-latin-300.eot'); /* IE9 Compat Modes */
   src: local('Work Sans Light'), local('WorkSans-Light'),
        url('/fonts/work-sans-v3-latin-300.eot?#iefix') format('embedded-opentype'), /* IE6-IE8 */
