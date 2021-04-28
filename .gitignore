@@ -5,3 +5,6 @@ _site
 # vim files
 *~
 *.swp
+
+.envrc
+.vscode
