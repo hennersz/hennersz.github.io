@@ -1,0 +1,19 @@
+<pageHeading>
+  <div class="pageHeadingEdge">
+    <span class="nav">
+      [
+        <span class="expandingMenu">
+          <a href="/">~</a>
+          <div>
+            <a href="/Blog">/Blog</a>
+            <a href="/Projects">/Projects</a>
+          </div>
+        </span>
+        {% if page.parent %}
+        /<a href="/{{ page.parent }}"> {{ page.parent }}</a>
+        {% endif %}
+      ]</span>
+  </div>
+  <div class="pageHeadingMiddle"><h1>{{ page.title }}</h1></div>  
+  <div class="pageHeadingEdge"></div>
+</pageHeading>

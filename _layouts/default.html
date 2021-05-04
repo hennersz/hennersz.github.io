@@ -1,12 +1,13 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
   {% include header.html %}
   <body>
     {% if page.showNav %}
-      {% include navbar.html %}
+      {% include pageHeading.html %}
     {% endif %}
     <main>
       {{ content }}
     </main>
+    {% include footer.html %}
   </body>
 </html>
