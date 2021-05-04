@@ -5,6 +5,10 @@ author: 'Henry Mortimer'
 categories: testing
 ---
 
+```python
+def function()
+  print("hello world")
+```
 
 Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam porta lacus sapien, lacinia luctus turpis volutpat in. Mauris finibus turpis eget felis aliquet, a rutrum lorem consequat. Etiam dui arcu, ultricies nec erat id, malesuada ornare leo. Morbi rutrum eleifend venenatis. Aenean quam velit, ornare ac consequat non, facilisis non libero. Etiam vel imperdiet nunc, quis aliquet turpis. Praesent quis urna sapien. Maecenas ut lacinia magna, bibendum tincidunt est. Morbi laoreet est odio, vel tempor arcu hendrerit eget. Proin et aliquam ex, non auctor nibh. Etiam ullamcorper nulla nibh, vitae tempor ex lacinia eu.
 

@@ -74,6 +74,11 @@ code{
   display: inline-block;
   overflow: scroll;
   width: 100%;
+  padding: 15px;
+}
+
+.highlight {
+  border-radius: 10px;
 }
 
 pageHeading {
