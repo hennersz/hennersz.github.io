@@ -1,6 +1,5 @@
 ---
 title: 'Hello World'
-date: 2018-1-31 21:16:00
 author: 'Henry Mortimer'
 categories: testing
 ---
