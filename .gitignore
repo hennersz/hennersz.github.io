@@ -9,3 +9,9 @@ _site
 .envrc
 .vscode
 .DS_Store
+
+.devenv
+.direnv
+.vscode
+result
+.pre-commit-config.yaml
