@@ -18,6 +18,14 @@
 
         devShells.default = std-dev-env.lib.nix.devenv {
           inherit pkgs inputs;
+          languages.deno.enable = true;
+
+          tasks."deno:install" = {
+            exec = ''
+              deno install --frozen
+            '';
+            before = [ "devenv:enterShell" ];
+          };
           packages = with pkgs; [
             deno
           ];

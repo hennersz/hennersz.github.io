@@ -1106,11 +1106,11 @@
         "poetry2nix": "poetry2nix"
       },
       "locked": {
-        "lastModified": 1780009569,
-        "narHash": "sha256-3XKB+9/8kpKASFecRJ7bpvEpgGRAnmuiHZAuUVtSubQ=",
+        "lastModified": 1780594182,
+        "narHash": "sha256-3biPj88ZoUC56dbcXLkgx1DTcvEikOHuGP6JG+ISo0E=",
         "owner": "hennersz",
         "repo": "std-dev-env",
-        "rev": "fed008f8ef685548a05881b9bdd2341057c0fc5e",
+        "rev": "4f3823b55be2622bb6979d9a699e1974e7c7f10d",
         "type": "github"
       },
       "original": {
