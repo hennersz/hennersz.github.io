@@ -2,34 +2,29 @@
 import { getCollection } from 'astro:content';
 import BaseHead from '../../components/BaseHead.astro';
 import Footer from '../../components/Footer.astro';
-import FormattedDate from '../../components/FormattedDate.astro';
 import Header from '../../components/Header.astro';
 import { SITE_TITLE } from '../../consts';
 
-const posts = (await getCollection('blog')).sort(
-	(a, b) => b.data.pubDate.valueOf() - a.data.pubDate.valueOf(),
-);
+const projects = await getCollection('projects');
 ---
 
 <!doctype html>
 <html lang="en">
 	<head>
-		<BaseHead title={`Blog | ${SITE_TITLE}`} description="Posts by Henry Mortimer" />
+		<BaseHead title={`Projects | ${SITE_TITLE}`} description="Projects by Henry Mortimer" />
 	</head>
 	<body>
 		<Header />
 		<main>
-			<h1>Blog</h1>
+			<h1>Projects</h1>
 			{
-				posts.map((post) => (
-					<div class="post">
+				projects.map((project) => (
+					<div class="project">
 						<h3>
-							<a href={`/blog/${post.id}/`}>{post.data.title}</a>
+							<a href={`/projects/${project.id}/`}>{project.data.title}</a>
 						</h3>
-						<time>
-							<FormattedDate date={post.data.pubDate} />
-						</time>
-						<p>{post.data.description}</p>
+						<p class="summary">{project.data.summary}</p>
+						{project.data.status && <span class="status">{project.data.status}</span>}
 					</div>
 				))
 			}
@@ -49,16 +44,24 @@ const posts = (await getCollection('blog')).sort(
 			padding-right: 5vw;
 		}
 	}
-	.post {
+	.project {
 		margin-bottom: 2em;
 	}
-	.post h3 {
+	.project h3 {
 		margin-bottom: 0.1em;
 	}
-	.post a {
+	.project a {
 		text-decoration: none;
 	}
-	.post a:hover {
+	.project a:hover {
 		color: #ee005b;
+	}
+	.summary {
+		color: #3b4b5e;
+		margin-bottom: 0.25em;
+	}
+	.status {
+		font-size: 0.85em;
+		color: #8e8e8e;
 	}
 </style>

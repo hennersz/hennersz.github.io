@@ -16,18 +16,35 @@
           inherit system;
         };
 
-        devShells.default = std-dev-env.lib.nix.devenv {
-          inherit pkgs inputs;
-          languages.deno.enable = true;
+        scripts = std-dev-env.lib.readScripts { dir = ./scripts; };
 
-          tasks."deno:install" = {
-            exec = ''
-              deno install --frozen
-            '';
-            before = [ "devenv:enterShell" ];
-          };
+        site = pkgs.buildNpmPackage {
+          pname = "mortinet";
+          version = "1.0.0";
+
+          src = ./.;
+
+          npmDepsHash = "sha256-WpjNmH2UlPq4U4hEWORAZlhEns7KIfn57B8plqxBrHY=";
+
+          npmBuildScript = "build";
+
+          installPhase = ''
+            runHook preInstall
+
+            mkdir -p "$out"
+            cp -R dist/. "$out/"
+
+            runHook postInstall
+          '';
+        };
+
+        devShells.default = std-dev-env.lib.nix.devenv {
+          inherit pkgs inputs scripts;
+
+          tasks."node:install" = { exec = '' npm install ''; before = [ "devenv:enterShell" ]; };
+
           packages = with pkgs; [
-            deno
+            nodejs_24
           ];
         };
 
@@ -39,11 +56,18 @@
               "flake-utils"
               "std-dev-env"
             ];
-            derivations = [ devShells.default ];
+            derivations = [
+              devShells.default
+              site
+            ];
           }).package;
       in
       {
         inherit devShells;
-        packages.saveFromGC = saveFromGC;
+
+        packages = {
+          inherit site saveFromGC;
+          default = site;
+        };
       });
 }

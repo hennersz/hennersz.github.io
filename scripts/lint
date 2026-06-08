@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+
+astro-lint
+nix-lint
+shell-lint

@@ -1,0 +1,5 @@
+#! /usr/bin/env bash
+
+astro-format
+nix-format
+shell-format
