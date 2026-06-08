@@ -9,6 +9,7 @@ const subpath = pathname.match(/[^/]+/g);
 const isActive = href === pathname || href === `/${subpath?.[0] || ''}`;
 ---
 
+<!-- biome-ignore lint/a11y/useAnchorContent: content is always provided via slot -->
 <a href={href} class:list={[className, { active: isActive }]} {...props}>
 	<slot />
 </a>

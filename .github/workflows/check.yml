@@ -32,7 +32,7 @@ jobs:
           purge-primary-key: never
 
       - name: Run checks
-        run: nix develop --impure --command check
+        run: nix develop --impure --command lint
 
       - name: Save GC roots
         run: nix build .#saveFromGC
