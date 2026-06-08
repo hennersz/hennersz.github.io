@@ -1,0 +1,80 @@
+---
+import type { CollectionEntry } from 'astro:content';
+import BaseHead from '../components/BaseHead.astro';
+import Footer from '../components/Footer.astro';
+import Header from '../components/Header.astro';
+
+type Props = CollectionEntry<'projects'>['data'];
+
+const { title, summary, source, website, status } = Astro.props;
+---
+
+<html lang="en">
+	<head>
+		<BaseHead title={title} description={summary} />
+	</head>
+	<body>
+		<Header />
+		<main>
+			<article>
+				<div class="prose">
+					<div class="title">
+						<h1>{title}</h1>
+						<div class="meta">
+							{status && <span>{status}</span>}
+							{
+								source && (
+									<a href={source} target="_blank" rel="noopener noreferrer">
+										Source
+									</a>
+								)
+							}
+							{
+								website && (
+									<a href={website} target="_blank" rel="noopener noreferrer">
+										Website
+									</a>
+								)
+							}
+						</div>
+						<hr />
+					</div>
+					<slot />
+				</div>
+			</article>
+		</main>
+		<Footer />
+	</body>
+</html>
+<style>
+	main {
+		padding-left: 15vw;
+		padding-right: 15vw;
+		padding-top: 2em;
+	}
+	@media (max-width: 800px) {
+		main {
+			padding-left: 5vw;
+			padding-right: 5vw;
+		}
+	}
+	.prose {
+		max-width: 800px;
+		margin: auto;
+	}
+	.title {
+		margin-bottom: 1em;
+		padding-bottom: 1em;
+	}
+	.meta {
+		display: flex;
+		flex-wrap: wrap;
+		gap: 0.5em 1.5em;
+		color: #8e8e8e;
+		font-size: 0.9em;
+		margin-top: 0.5em;
+	}
+	.meta a {
+		color: #ee005b;
+	}
+</style>

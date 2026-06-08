@@ -1,0 +1,33 @@
+---
+import HeaderLink from './HeaderLink.astro';
+---
+
+<header>
+	<nav>
+		[<HeaderLink href="/">~</HeaderLink>/<HeaderLink href="/blog">Blog</HeaderLink>/<HeaderLink
+			href="/projects">Projects</HeaderLink>]
+	</nav>
+</header>
+<style>
+	header {
+		margin: 0;
+		padding: 0.5em 3vw;
+		background: rgba(255, 255, 255, 0.27);
+	}
+	nav {
+		font-family: 'Space Mono', monospace;
+		font-size: 1.5em;
+		display: flex;
+		flex-direction: row;
+		align-items: center;
+		gap: 0;
+	}
+	nav :global(a) {
+		text-decoration: none;
+		color: #3b4b5e;
+	}
+	nav :global(a:hover),
+	nav :global(a.active) {
+		color: #ee005b;
+	}
+</style>

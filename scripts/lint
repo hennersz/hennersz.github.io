@@ -1,0 +1,6 @@
+#! /usr/bin/env bash
+set -euo pipefail
+
+astro-lint
+nix-lint
+shell-lint

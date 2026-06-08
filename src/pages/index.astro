@@ -1,0 +1,50 @@
+---
+import Default from "../layouts/Default.astro";
+---
+
+<Default>
+  <div class="flexColumn" style="height: 100vh">
+    <div class="flexRow" style="width: 100%; flex-wrap: wrap;">
+      <div class="flex1-2">
+        <h1 style="padding: 5px">Henry Mortimer</h1>
+        <h4 style="padding: 5px">
+          Currently working for <a href="https://neo4j.com">Neo4j</a>
+        </h4>
+      </div>
+      <div class="flex1-2">
+        <div class="flexRow">
+          <div class="flex1-3 padded">
+            <a href="https://github.com/hennersz" aria-label="Github"
+              ><i class="fa fa-github fa-5x" aria-hidden="true"></i></a
+            >
+          </div>
+          <div class="flex1-3 padded">
+            <a href="https://www.instagram.com/hennersz/" aria-label="Instagram"
+              ><i class="fa fa-instagram fa-5x" aria-hidden="true"></i></a
+            >
+          </div>
+          <div class="flex1-3 padded">
+            <a href="https://www.linkedin.com/in/henry-mortimer" aria-label="LinkedIn"
+              ><i class="fa fa-linkedin fa-5x" aria-hidden="true"></i></a
+            >
+          </div>
+        </div>
+        <div class="flexRow" style="padding-top: 20px; font-size: 1.3em;">
+          <div class="flex1-2">
+            <a href="/blog">Blog</a>
+          </div>
+          <div class="flex1-2">
+            <a href="/projects/">Projects</a>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div>
+      <h3>Contact me</h3>
+      <h4>Email: henry (at) morti.net</h4>
+      <a href="/henryMortimerPubKey.asc" download>
+        PGP Key
+      </a>
+    </div>
+  </div>
+</Default>
