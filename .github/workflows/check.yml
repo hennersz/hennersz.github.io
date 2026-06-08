@@ -19,20 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
 
-      - uses: DeterminateSystems/nix-installer-action@v16
-
-      - uses: nix-community/cache-nix-action@v7
-        with:
-          primary-key: nix-${{ runner.os }}-${{ hashFiles('**/*.nix', '**/flake.lock') }}
-          restore-prefixes-first-match: nix-${{ runner.os }}-
-          gc-max-store-size-linux: 4073741824
-          purge: true
-          purge-prefixes: nix-${{ runner.os }}-
-          purge-created: 0
-          purge-primary-key: never
+      - name: Setup Nix
+        uses: ./.github/actions/setup-nix
 
       - name: Run checks
-        run: nix develop --impure --command lint
-
-      - name: Save GC roots
-        run: nix build .#saveFromGC
+        run: nix develop --impure --command check
