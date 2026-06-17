@@ -24,7 +24,11 @@
 
           src = ./.;
 
-          npmDepsHash = "sha256-WpjNmH2UlPq4U4hEWORAZlhEns7KIfn57B8plqxBrHY=";
+          npmDeps = pkgs.importNpmLock {
+            npmRoot = ./.;
+          };
+
+          npmConfigHook = pkgs.importNpmLock.npmConfigHook;
 
           npmBuildScript = "build";
 
