@@ -5,9 +5,9 @@
   ],
   "lockFileMaintenance": {
     "enabled": true,
-	"schedule": [
-		"* 0-3 * * 6"
-	],
+    "schedule": [
+      "* 0-3 * * 6"
+    ],
     "minimumReleaseAge": null,
     "minimumReleaseAgeBehaviour": "timestamp-optional"
   },
@@ -19,12 +19,20 @@
   "internalChecksFilter": "strict",
   "packageRules": [
     {
-      "matchUpdateTypes": ["minor", "patch", "pin", "digest"],
+      "matchUpdateTypes": [
+        "minor",
+        "patch",
+        "pin",
+        "digest"
+      ],
       "automerge": true
     },
     {
       "description": "minimumReleaseAge for direct deps only, not lockfile-only changes",
-      "matchUpdateTypes": ["lockFileMaintenance", "lockFileUpdate"],
+      "matchUpdateTypes": [
+        "lockFileMaintenance",
+        "lockFileUpdate"
+      ],
       "automerge": true,
       "minimumReleaseAge": null,
       "minimumReleaseAgeBehaviour": "timestamp-optional"
