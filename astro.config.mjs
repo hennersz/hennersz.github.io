@@ -7,4 +7,13 @@ import { defineConfig } from 'astro/config';
 export default defineConfig({
 	site: 'https://morti.net',
 	integrations: [mdx(), sitemap()],
+	vite: {
+		css: {
+			preprocessorOptions: {
+				scss: {
+					loadPaths: ['node_modules'],
+				},
+			},
+		},
+	},
 });
