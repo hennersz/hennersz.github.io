@@ -7,17 +7,18 @@
 	},
 	"scripts": {
 		"dev": "astro dev",
-		"build": "astro build",
+		"build": "astro build && mkdir -p dist/fonts && cp node_modules/font-awesome/fonts/* dist/fonts/",
 		"preview": "astro preview",
 		"astro": "astro",
 		"lint": "biome check ./src",
-		"format" : "biome check --write ./src"
+		"format": "biome check --write ./src"
 	},
 	"dependencies": {
 		"@astrojs/mdx": "^6.0.2",
 		"@astrojs/rss": "^4.0.18",
 		"@astrojs/sitemap": "^3.7.3",
 		"astro": "^6.4.8",
+		"font-awesome": "^4.7.0",
 		"sass": "^1.100.0",
 		"sharp": "^0.35.0"
 	},
