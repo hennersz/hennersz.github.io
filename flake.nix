@@ -63,6 +63,7 @@
             derivations = [
               devShells.default
               site
+              site.inputDerivation
             ];
           }).package;
       in
