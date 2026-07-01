@@ -1,154 +1,160 @@
-h1,h2, h3, h4{
-  font-family: $headingFont;
-  color: $headingColour;
-  line-height: 1.2;
-  font-weight: 400;
+h1,
+h2,
+h3,
+h4 {
+	font-family: $headingFont;
+	color: $headingColour;
+	line-height: 1.2;
+	font-weight: 400;
 }
 
-h1{
-  color: $highlightColour;
-  font-size: 4em;
-  a, a:visited {
+a,
+a:visited {
+	color: $linkColour;
+	text-decoration: underline;
+	font-weight: 400;
+}
+
+h1 {
+	color: $highlightColour;
+	font-size: 4em;
+	a,
+	a:visited {
 		text-decoration: none;
 		color: $highlightColour;
 	}
 }
 
-h2{
-  font-size: 3em;
-}
- 
-h3{
-  font-size: 2.5em;
+h2 {
+	font-size: 3em;
 }
 
-a, a:visited {
-  color: $linkColour;
-  text-decoration: underline;
-  font-weight: 400;
-  &:hover {
-    color: $linkColourHover;
-    text-decoration: underline;
-  }
+h3 {
+	font-size: 2.5em;
 }
 
 button {
-  padding: 15px;
-  font-size: 0.9em;
-  border: 3px solid $highlightColour;
-  border-radius: 10em;
-  margin: 5px;
-  color: $highlightColour;
-  cursor: pointer;
+	padding: 15px;
+	font-size: 0.9em;
+	border: 3px solid $highlightColour;
+	border-radius: 10em;
+	margin: 5px;
+	color: $highlightColour;
+	cursor: pointer;
 
-  &:hover{
-    color: white;
-    background: $highlightColour;
-
-  }
-}
-
-navbar {
-  font-family: $headingFont;
-  display: flex;
-  flex-direction: row;
-  align-items: center;
-  font-size: 2em;
-  width: 100%;
-  background: #ffffff45;
-  padding-left: 3vw;
-  a, a:hover{
-    text-decoration: none;
-  }
+	&:hover {
+		color: white;
+		background: $highlightColour;
+	}
 }
 
 time {
-  color: #8E8E8E;
+	color: #8e8e8e;
 }
 
-hr{
-  border-width: 0.5px;
+hr {
+	border-width: 0.5px;
 }
 
-code{
-  display: inline-block;
-  overflow: scroll;
-  width: 100%;
-  padding: 15px;
+code {
+	display: inline-block;
+	overflow: scroll;
+	width: 100%;
+	padding: 15px;
 }
 
 .highlight {
-  border-radius: 10px;
+	border-radius: 10px;
 }
 
-pageHeading {
-  display: flex;
-  justify-content: space-between;
-  padding: 15px 5vw;
-  h1 {
-    margin: 0;
-    line-height: 1;
-  }
-  @media (max-width: 800px) {
-    flex-direction: column;
-    h1 {
-      margin-top: 15px;
-    }
-  }
+.pageHeading {
+	display: flex;
+	justify-content: space-between;
+	padding: 15px 5vw;
+	h1 {
+		margin: 0;
+		line-height: 1;
+	}
+	@media (max-width: 800px) {
+		flex-direction: column;
+		h1 {
+			margin-top: 15px;
+		}
+	}
 }
 
 .pageHeadingEdge {
-  flex-basis: 21vw;
-  display: flex;
-  justify-content: center;
-  flex-direction: column;
-  @media (max-width: 800px) {
-    flex-basis: 0;
-  }
+	flex-basis: 21vw;
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	@media (max-width: 800px) {
+		flex-basis: 0;
+	}
 }
 
 .pageHeadingMiddle {
-  text-align: center;
+	text-align: center;
 }
 
 .nav {
-  font-family: $headingFont;
-  font-size: 1.4em;
-  background-color: white;
-  a {
-    text-decoration: none;
-  }
+	font-family: $headingFont;
+	font-size: 1.4em;
+	background-color: white;
+	a {
+		text-decoration: none;
+	}
 }
 
 .expandingMenu {
-  padding-bottom: 5px;
-  div {
-    transition: 1s ease-in-out;
-    display: block;
-    z-index: -1000;
-    position: absolute;
-    transform: translate(0,-1.6em);
-    @for $i from 0 to 2 {
-      a:nth-child(#{$i + 1}) {
-        transition: 1s ease-in-out;
-        transition-property: transform;
-        display: block;
-        transform: translate(0,-$i * 1.6 + em);
-      }
-    }
-  }
-  &:hover {
-    div {
-      transform: translate(0,0em);
-      z-index: 2;
-      a:nth-child(n) {
-        transform: translate(0,0em);
-      }
-    }
-  }
-  @media (max-width: 800px) {
-    div {
-      display: none;
-    }
-  }
+	padding-bottom: 5px;
+	div {
+		transition: 1s ease-in-out;
+		display: block;
+		z-index: -1000;
+		position: absolute;
+		transform: translate(0, -1.6em);
+		@for $i from 0 to 2 {
+			a:nth-child(#{$i + 1}) {
+				transition: 1s ease-in-out;
+				transition-property: transform;
+				display: block;
+				transform: translate(0, -$i * 1.6 + em);
+			}
+		}
+	}
+	&:hover {
+		div {
+			transform: translate(0, 0em);
+			z-index: 2;
+			a:nth-child(n) {
+				transform: translate(0, 0em);
+			}
+		}
+	}
+	@media (max-width: 800px) {
+		div {
+			display: none;
+		}
+	}
+}
+
+a:hover,
+a:visited:hover {
+	color: $linkColourHover;
+	text-decoration: underline;
+}
+nav {
+	font-family: $headingFont;
+	display: flex;
+	flex-direction: row;
+	align-items: center;
+	font-size: 2em;
+	width: 100%;
+	background: #ffffff45;
+	padding-left: 3vw;
+	a,
+	a:hover {
+		text-decoration: none;
+	}
 }
