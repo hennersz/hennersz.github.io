@@ -33,16 +33,5 @@
 	},
 	"html": {
 		"experimentalFullSupportEnabled": true
-	},
-	"overrides": [
-		{
-			"includes": ["**/*.scss"],
-			"formatter": {
-				"enabled": false
-			},
-			"linter": {
-				"enabled": false
-			}
-		}
-	]
+	}
 }
