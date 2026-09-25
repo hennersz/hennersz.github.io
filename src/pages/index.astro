@@ -15,17 +15,23 @@ import Default from "../layouts/Default.astro";
         <div class="flexRow">
           <div class="flex1-3 padded">
             <a href="https://github.com/hennersz" aria-label="Github"
-              ><i class="fa fa-github fa-5x" aria-hidden="true"></i></a
+              ><i class="fa fa-github fa-5x" aria-hidden="true"></i><span class="sr-only"
+                >GitHub</span
+              ></a
             >
           </div>
           <div class="flex1-3 padded">
             <a href="https://www.instagram.com/hennersz/" aria-label="Instagram"
-              ><i class="fa fa-instagram fa-5x" aria-hidden="true"></i></a
+              ><i class="fa fa-instagram fa-5x" aria-hidden="true"></i><span class="sr-only"
+                >Instagram</span
+              ></a
             >
           </div>
           <div class="flex1-3 padded">
             <a href="https://www.linkedin.com/in/henry-mortimer" aria-label="LinkedIn"
-              ><i class="fa fa-linkedin fa-5x" aria-hidden="true"></i></a
+              ><i class="fa fa-linkedin fa-5x" aria-hidden="true"></i><span class="sr-only"
+                >LinkedIn</span
+              ></a
             >
           </div>
         </div>
@@ -48,3 +54,17 @@ import Default from "../layouts/Default.astro";
     </div>
   </div>
 </Default>
+
+<style>
+  .sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+  }
+</style>
